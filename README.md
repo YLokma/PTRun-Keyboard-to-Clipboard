@@ -1,6 +1,6 @@
 # PowerToys Run: Keyboard-to-Clipboard Plugin
 
-Sometimes you have to jot down an idea or write down something quickly and have it saved on your clipboard, you can use this plugin just for that
+Sometimes you have to jot down an idea or write down something quickly and have it saved on your clipboard. You can use this plugin just for that.
 
 ## Requirements
 
@@ -9,7 +9,7 @@ Sometimes you have to jot down an idea or write down something quickly and have 
 ## Installation
 
 Install:
-1. Download the [latest release](...)
+1. Download the [latest release](https://github.com/YLokma/PTRun-Keyboard-to-Clipboard/releases)
 2. Close PowerToys
 3. Extract the `Keyboard-to-Clipboard` folder inside it to `%LocalAppData%\Microsoft\PowerToys\PowerToys Run\Plugins`
 4. Start PowerToys
@@ -18,8 +18,8 @@ Install:
 
 1. Open PowerToys Run (default: `<Alt>` + `<Space>`)
 2. Type the direct activation command (default: `c+`) and a space
-3. Continue typing whatever you want to karenify
-4. Select one of the entries, then press `<Enter>` to copy that into clipboard
+3. Continue typing whatever you want to save to your clipboard
+4. Then, simply press `<Enter>` to copy that into clipboard
 
 ## Building
 
