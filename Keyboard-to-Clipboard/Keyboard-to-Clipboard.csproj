@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Product>Karenify</Product>
-    <Description>Plugin for PowerToys Run to Karenify input and copy it to the clipboard</Description>
-    <Version>1.1.0</Version>
-    <Copyright>Copyright (c) 2023</Copyright>
-    <Authors>Simon Sawicki (Grub4K)</Authors>
+    <Product>Keyboard-to-Clipboard</Product>
+    <Description>Plugin for PowerToys Run to insert keyboard input and copy it to the clipboard</Description>
+    <Version>0.5.0</Version>
+    <Copyright>Copyright (c) 2024</Copyright>
+    <Authors>Youssof Lokma</Authors>
 
     <TargetFramework>net8.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -14,8 +14,8 @@
     <UseWindowsForms>true</UseWindowsForms>
 
     <Platforms>AnyCPU;x64</Platforms>
-    <PublishDir>../build/Karenify</PublishDir>
-    <AssemblyName>Community.PowerToys.Run.Plugin.Karenify</AssemblyName>
+    <PublishDir>../build/Keyboard-to-Clipboard</PublishDir>
+    <AssemblyName>Community.Powertoys.Run.Plugin.Keyboard-to-Clipboard</AssemblyName>
   </PropertyGroup>
 
   <!-- If the install location is different, put the libraries into `lib/` -->
@@ -41,10 +41,10 @@
     <None Update="plugin.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="res/Karenify.dark.png">
+    <None Update="res/ClipboardManager.dark.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="res/Karenify.light.png">
+    <None Update="res/ClipboardManager.light.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

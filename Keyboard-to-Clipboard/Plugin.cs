@@ -1,14 +1,14 @@
 using ManagedCommon;
-using System.Windows.Forms;
+//using System.Windows.Forms;
 using Wox.Plugin;
 
-namespace Community.Powertoys.Run.Plugin.Karenify;
+namespace Community.Powertoys.Run.Plugin.Keyboard_to_Clipboard;
 
 public class Plugin : IPlugin
 {
-    public string Name => "Karenify";
-    public string Description => "Karenify input and copy it to the clipboard";
-    public static string PluginID => "5EAAFCA8209044DA80F026B8EFE24FAD";
+    public string Name => "Keyboard to Clipboard";
+    public string Description => "Insert keyboard input and copy it to the clipboard";
+    public static string PluginID => "255E141EAF5D45569752CB12D3C674EC";
 
     private PluginInitContext? _context;
     private string? _iconPath;
@@ -28,13 +28,12 @@ public class Plugin : IPlugin
         if (string.IsNullOrEmpty(query.Search))
             return new();
 
-        var options = new KarenifyOptions[] {
-            new(UppercaseFirst: true),
-            new(UppercaseFirst: false),
+        var options = new Options[] {
+            new(),
         };
         return options
             .Select(options => {
-                var result = Karenify(query.Search, options);
+                var result = query.Search;
                 return new Result()
                 {
                     QueryTextDisplay = query.Search,
@@ -50,31 +49,12 @@ public class Plugin : IPlugin
             .ToList();
     }
 
-    private string Karenify(string source, KarenifyOptions options)
-    {
-        var upper = options.UppercaseFirst;
-        var buffer = source.ToCharArray();
-
-        for (var i = 0; i < buffer.Length; i++)
-        {
-            if (Char.IsLetter(buffer[i]))
-            {
-                buffer[i] = upper
-                    ? Char.ToUpper(buffer[i])
-                    : Char.ToLower(buffer[i]);
-                upper = !upper;
-            }
-        }
-
-        return new(buffer);
-    }
-
     private void UpdateIconPath(Theme theme)
     {
         _iconPath = theme is Theme.Light or Theme.HighContrastWhite
-            ? "res/Karenify.light.png"
-            : "res/Karenify.dark.png";
+            ? "res/ClipboardManager.dark.png"
+            : "res/ClipboardManager.light.png";
     }
 }
 
-public record struct KarenifyOptions(bool UppercaseFirst);
+public record struct Options();

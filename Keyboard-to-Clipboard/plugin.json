@@ -1,0 +1,14 @@
+{
+	"ID": "255E141EAF5D45569752CB12D3C674EC",
+	"ActionKeyword": "c+",
+	"Disabled": false,
+	"IsGlobal": false,
+	"Name": "Keyboard to Clipboard",
+	"Author": "Youssof Lokma",
+	"Version": "1.1.0",
+	"Language": "csharp",
+	"Website": "https://github.com/YLokma/PTRun-Keyboard-to-Clipboard",
+	"ExecuteFileName": "Community.PowerToys.Run.Plugin.Keyboard-to-Clipboard.dll",
+	"IcoPathDark": "res/ClipboardManager.dark.png",
+	"IcoPathLight": "res/ClipboardManager.light.png"
+}
